@@ -25,3 +25,8 @@ After installation, remove the openscene version(not know why):
 apt list --installed | grep openscene  
 apt-get remove libopenscenegraph-dev/bionic libopenscenegraph100v5/bionic openscenegraph/bionic  
 ```  
+Before run programs, add path to PYTHONPATH
+```bash
+openrave-config --python-dir
+export PYTHONPATH=$PYTHONPATH:"openrave-config --python-dir"
+```
