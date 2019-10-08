@@ -59,8 +59,9 @@ elif [ ${UBUNTU_VER} = '18.04' ]; then
     # Install boost 1.58 from source
     BOOST_SRC_DIR=~/git/boost_1_58_0
     mkdir -p ~/git; cd ~/git
-    wget https://vorboss.dl.sourceforge.net/project/boost/boost/1.58.0/boost_1_58_0.tar.gz -O ${BOOST_SRC_DIR}.tar.gz
-    tar -xzf ${BOOST_SRC_DIR}.tar.gz
+    # wget https://vorboss.dl.sourceforge.net/project/boost/boost/1.58.0/boost_1_58_0.tar.gz -O ${BOOST_SRC_DIR}.tar.gz
+    wget https://sourceforge.net/projects/boost/files/boost/1.58.0/boost_1_58_0.tar.gz/download -O ${BOOST_SRC_DIR}.tar.gz
+    tar -xvzf ${BOOST_SRC_DIR}.tar.gz
     cd ${BOOST_SRC_DIR}
     ./bootstrap.sh --exec-prefix=/usr/local
     ./b2 -j `nproc`

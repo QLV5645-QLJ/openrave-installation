@@ -19,4 +19,9 @@ Run the scripts in the following order:
 ./install-osg.sh
 ./install-fcl.sh
 ./install-openrave.sh
-```
+```   
+After installation, remove the openscene version(not know why):  
+```bash
+apt list --installed | grep openscene  
+apt-get remove libopenscenegraph-dev/bionic libopenscenegraph100v5/bionic openscenegraph/bionic  
+```  
